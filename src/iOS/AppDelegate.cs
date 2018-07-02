@@ -14,7 +14,7 @@ namespace OfficeLocator.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
-        string appCenterKey = "9b7f85a9-d143-4a07-8eae-e226483721ae";
+        string appCenterKey = "3cafc1a3-2b41-46ad-9252-25f8452a6f7e";
         public static Func<NSUrl, bool> ResumeWithURL;
 
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
