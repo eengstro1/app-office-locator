@@ -18,7 +18,7 @@ namespace OfficeLocator.Droid
     [Activity(Label = "Office Locator", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        string appCenterKey = "521819e0-c278-4d72-9f20-4c593ab039ba";
+        string appCenterKey = "3cafc1a3-2b41-46ad-9252-25f8452a6f7e";
 
         protected override void OnCreate(Bundle bundle)
         {
