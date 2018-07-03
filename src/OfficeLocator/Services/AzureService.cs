@@ -34,9 +34,8 @@ namespace OfficeLocator.Services
         {
             if (Client?.SyncContext?.IsInitialized ?? false)
                 return;
-
-
-            var appUrl = "https://my-office-locator.azurewebsites.net";
+            
+            var appUrl = "https://my-office-locator-eme.azurewebsites.net";
 
 #if AUTH
             Client = new MobileServiceClient(appUrl, new AuthHandler());
