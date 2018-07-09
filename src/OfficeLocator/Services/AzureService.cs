@@ -14,6 +14,8 @@ using OfficeLocator.Models;
 using System.IO;
 using Plugin.Connectivity;
 using OfficeLocator.Services;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 [assembly: Dependency(typeof(AzureService))]
 namespace OfficeLocator.Services
@@ -46,8 +48,19 @@ namespace OfficeLocator.Services
             }
 #else
             //Create our client
-
-            Client = new MobileServiceClient(appUrl);
+            try
+            {
+                Client = new MobileServiceClient(appUrl);
+            }
+            catch (Exception ex)
+            {
+                Crashes.TrackError(ex);
+                Analytics.TrackEvent("Exception", new Dictionary<string, string> {
+                    { "Message", ex.Message },
+                    { "StackTrace", ex.ToString() }
+                });
+            }
+            
 
 #endif
 
@@ -101,6 +114,7 @@ namespace OfficeLocator.Services
             }
             catch (Exception ex)
             {
+                Crashes.TrackError(ex);
                 Debug.WriteLine("Unable to sync feedback, that is alright as we have offline capabilities: " + ex);
             }
 

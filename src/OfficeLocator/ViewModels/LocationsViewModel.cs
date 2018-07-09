@@ -6,6 +6,7 @@ using OfficeLocator.Models;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using System.Collections.Generic;
 using System.Linq;
 using OfficeLocator.Helpers;
@@ -113,6 +114,7 @@ namespace OfficeLocator.ViewModels
                 Sort();
             }
             catch(Exception ex) {
+                Crashes.TrackError(ex);
                 _page.DisplayAlert ("Uh Oh :(", "Unable to gather locations.", "OK");
                 Analytics.TrackEvent("Exception", new Dictionary<string, string> {
                     { "Message", ex.Message },

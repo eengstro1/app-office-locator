@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using MvvmHelpers;
 using OfficeLocator.Models;
 using OfficeLocator.Services;
@@ -89,6 +90,7 @@ namespace OfficeLocator.ViewModels
             }
             catch (Exception ex)
             {
+                Crashes.TrackError(ex);
                 _page.DisplayAlert("Uh Oh :(", "Unable to save feedback, please try again.", "OK");
                 Analytics.TrackEvent("Exception", new Dictionary<string, string> {
                     { "Message", ex.Message },
