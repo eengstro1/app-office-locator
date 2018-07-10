@@ -87,6 +87,8 @@ namespace OfficeLocator.ViewModels
                     PhoneNumber = PhoneNumber,
                     RequiresCall = RequiresCall,
                 });
+
+                Crashes.GenerateTestCrash();
             }
             catch (Exception ex)
             {

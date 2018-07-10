@@ -50,7 +50,7 @@ namespace OfficeLocator.Services
             //Create our client
             try
             {
-                Client = new MobileServiceClient(appUrl);
+                Client = new MobileServiceClient(appUrl);              
             }
             catch (Exception ex)
             {
