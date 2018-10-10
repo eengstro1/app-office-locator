@@ -278,9 +278,6 @@
     <Reference Include="Xamarin.Android.Support.Exif">
       <HintPath>..\packages\Xamarin.Android.Support.Exif.26.1.0.1\lib\MonoAndroid80\Xamarin.Android.Support.Exif.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.UITest, Version=2.2.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.UITest.2.2.6\lib\portable-net45+win8+wp8\Xamarin.UITest.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
