@@ -9,6 +9,7 @@ using Microsoft.AppCenter.Crashes;
 using ObjCRuntime;
 using UIKit;
 
+
 namespace OfficeLocator.iOS
 {
     [Register("AppDelegate")]
@@ -19,7 +20,10 @@ namespace OfficeLocator.iOS
 
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            
+#if ENABLE_TEST_CLOUD
+            Xamarin.Calabash.Start();
+#endif
+
             UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(28, 43, 67); //bar background
             UINavigationBar.Appearance.TintColor = UIColor.White; //Tint color of button items
             UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes()

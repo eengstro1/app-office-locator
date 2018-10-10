@@ -25,6 +25,13 @@ namespace OfficeLocator.Pages
             butSubmitFeedBack.Command = viewModel.SaveFeedbackCommand;
 
             ToolbarItems.Add(butSubmitFeedBack);
+
+            Analytics.TrackEvent("FeedbackPage", new Dictionary<string, string>
+            {
+                {"name", location.Name},
+                {"locationcountry", location.Country}
+            });
+
         }
 
         protected override void OnAppearing()
