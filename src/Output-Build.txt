@@ -1,0 +1,2 @@
+﻿========== Deploy: 0 succeeded, 0 failed, 0 skipped ==========
+An active connection to the Mac is required in order to run the application. Please ensure the connection is established and try again
