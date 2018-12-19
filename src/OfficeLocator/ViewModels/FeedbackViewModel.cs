@@ -88,7 +88,8 @@ namespace OfficeLocator.ViewModels
                     RequiresCall = RequiresCall,
                 });
 
-                Crashes.GenerateTestCrash();
+                //Gen App center test crash
+                //Crashes.GenerateTestCrash();
             }
             catch (Exception ex)
             {
