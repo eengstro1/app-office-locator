@@ -59,8 +59,7 @@ namespace OfficeLocator.Services
                     { "Message", ex.Message },
                     { "StackTrace", ex.ToString() }
                 });
-            }
-            
+            }            
 
 #endif
 
